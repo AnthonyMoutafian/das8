@@ -1,12 +1,21 @@
-function multiplyNumeric(obj){
-    const menu = {
-       width: 200,
-       height: 300,
-       title: 'My menu'
-     }
-     menu.width*=obj
-     menu.height*=obj
-     return menu
+let ladder = {
+    number : 0,
  }
- let res = multiplyNumeric(2)
- console.log(res);
+ function showStep(){
+    return console.log(ladder.number);
+ }
+ function up(){
+    ladder.number+=1
+    return ladder.number
+ }
+ function down(){
+    ladder.number -=1
+    return ladder.number
+ }
+ 
+ showStep();
+ up();
+ up();
+ showStep();
+ down();
+ showStep();
